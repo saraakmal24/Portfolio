@@ -1,0 +1,17 @@
+@import "tailwindcss";
+/* If your file shows @tailwind base; etc. (v3), keep those 3 lines instead of the line above */
+
+html { scroll-behavior: smooth; }
+body { background: #09090b; }
+::selection { background: rgb(34 211 238 / .9); color: #09090b; }
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 999px; }
+
+/* Cursor-following glow on cards */
+.spotlight { position: relative; }
+.spotlight::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(550px circle at var(--x,50%) var(--y,50%), rgb(34 211 238 / .1), transparent 40%);
+  opacity: 0; transition: opacity .35s; pointer-events: none;
+}
+.spotlight:hover::before { opacity: 1; }
