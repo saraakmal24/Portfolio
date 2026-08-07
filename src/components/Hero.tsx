@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, ArrowDown } from 'lucide-react';
 import NeuralCanvas from './NeuralCanvas';
 import { Magnetic, GithubIcon, LinkedinIcon } from './ui';
-import { socials } from '@/data/portfolio';
+import { socials } from '../data/portfolio';
 
 const words = ['Agentic', 'AI,', 'Computer', 'Vision', '&', 'Full-Stack', 'Systems.'];
 const stats = [
@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="ml-2 flex items-center gap-4 text-zinc-400">
             <a href={socials.github} target="_blank" className="hover:text-cyan-400" aria-label="GitHub"><GithubIcon size={20} /></a>
             <a href={socials.linkedin} target="_blank" className="hover:text-cyan-400" aria-label="LinkedIn"><LinkedinIcon size={20} /></a>
-            <a href={`mailto:${socials.email}`} className="hover:text-cyan-400" aria-label="Email"><Mail size={20} /></a>
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${socials.email}`} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400" aria-label="Email"><Mail size={20} /></a>
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="mt-14 grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
